@@ -1,0 +1,10 @@
+{
+  "name": "reroute-ai-api",
+  "version": "1.0.0",
+  "description": "ReRoute AI - IRROPS Karar Destek Sistemi - Skorlama API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "license": "UNLICENSED"
+}
