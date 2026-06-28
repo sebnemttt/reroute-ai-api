@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>ReRoute AI API</title>
+<style>
+  body { background:#0a0e14; color:#e8ecf3; font-family:'JetBrains Mono', monospace; padding:40px; max-width:720px; margin:0 auto; line-height:1.7; }
+  h1 { color:#e8123f; font-size:20px; }
+  code { background:#161c28; padding:2px 6px; border-radius:4px; color:#4a8fe8; }
+  pre { background:#161c28; padding:16px; border-radius:8px; overflow-x:auto; font-size:13px; }
+  .badge { display:inline-block; background:rgba(47,184,102,0.15); color:#2fb866; border:1px solid rgba(47,184,102,0.3); padding:4px 10px; border-radius:100px; font-size:12px; margin-bottom:20px; }
+  a { color:#4a8fe8; }
+</style>
+</head>
+<body>
+  <div class="badge">● API ÇALIŞIYOR</div>
+  <h1>ReRoute AI — IRROPS Skorlama API</h1>
+  <p>Bu, ReRoute AI'nin öncelik skorlama motorunun gerçek, canlı backend'idir. Turkish Airlines Terminal Girişim Hızlandırma Programı 2026 başvurusu kapsamında geliştirilmiştir.</p>
+
+  <h2 style="font-size:15px; color:#8b96ab;">Endpoint 1: Tek Yolcu Skoru</h2>
+  <pre>POST /api/score
+Content-Type: application/json
+
+{
+  "tier": "Elite Plus",
+  "connMin": 38,
+  "cabin": "Business",
+  "special": false
+}</pre>
+
+  <h2 style="font-size:15px; color:#8b96ab;">Endpoint 2: Toplu Yolcu Skorlama</h2>
+  <pre>POST /api/batch-score
+Content-Type: application/json
+
+{
+  "passengers": [
+    { "name": "Elif Yıldırım", "tier": "Elite Plus", "connMin": 38, "cabin": "Business", "special": false },
+    { "name": "Sarah Connors", "tier": "Classic", "connMin": 70, "cabin": "Economy Comfort", "special": true }
+  ]
+}</pre>
+
+  <p style="color:#5a6478; font-size:12px; margin-top:30px;">ReRoute AI — Turkish Airlines Terminal Girişim Hızlandırma Programı 2026 başvurusu için geliştirildi.</p>
+</body>
+</html>
